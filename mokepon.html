@@ -11,12 +11,12 @@
     <section id="seleccionar-mascota">
       <h2>Elige tu mascota:</h2>
 
-      <label for="Hipodoge">Hipodoge</label>
-      <input type="radio" name="mascota" id="Hipodoge" />
-      <label for="capipepo">capipepo</label>
+      <label for="hipodoge">Hipodoge</label>
+      <input type="radio" name="mascota" id="hipodoge" />
+      <label for="capipepo">Capipepo</label>
       <input type="radio" name="mascota" id="capipepo" />
-      <label for="Ratigueya">Ratigueya</label>
-      <input type="radio" name="mascota" id="Ratigueya" />
+      <label for="ratigueya">Ratigueya</label>
+      <input type="radio" name="mascota" id="ratigueya" />
 
       <!-- Hipodoge -> Agua Capipepo -> Tierra Ratigueya -> Fuego Langostelvi -> Agua
       y Fuego Tucapalma -> Agua y Tierra Pydos -> Tierra y Fuego -->
@@ -27,8 +27,13 @@
     <section id="seleccionar-ataque">
       <h2>Elige tu ataque:</h2>
 
-      <p>Tu mascota tiene <span>3</span> vidas</p>
-      <p>La mascota del enemigo tiene <span>3</span> vidas</p>
+      <p>
+        Tu mascota <span id="mascota-jugador"></span> tiene <span>3</span> vidas
+      </p>
+      <p>
+        La mascota <span id="mascota-enemigo"></span> del enemigo tiene
+        <span>3</span> vidas
+      </p>
 
       <p>
         <button id="boton-fuego">Fuego 🔥</button>
