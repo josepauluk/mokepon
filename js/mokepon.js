@@ -1,6 +1,16 @@
+let ataquejugador;
+let ataqueEnemigo;
+
 function iniciarJuego() {
   let botonMascotaJugador = document.getElementById("boton-mascota");
   botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador);
+
+  let botonFuego = document.getElementById("boton-fuego");
+  botonFuego.addEventListener("click", ataqueFuego);
+  let botonAgua = document.getElementById("boton-agua");
+  botonAgua.addEventListener("click", ataqueAgua);
+  let botonTierra = document.getElementById("boton-tierra");
+  botonTierra.addEventListener("click", ataqueTierra);
 }
 
 function seleccionarMascotaJugador() {
@@ -22,16 +32,57 @@ function seleccionarMascotaJugador() {
 }
 
 function seleccionarMascotaEnemigo() {
-  let ataqueAleatorio = aleatorio(1, 3);
+  let mascotaleatoria = aleatorio(1, 3);
   let spanMascotaEnemigo = document.getElementById("mascota-enemigo");
 
-  if (ataqueAleatorio == 1) {
+  if (mascotaleatoria == 1) {
     spanMascotaEnemigo.innerHTML = "Hipodogue";
-  } else if (ataqueAleatorio == 2) {
+  } else if (mascotaleatoria == 2) {
     spanMascotaEnemigo.innerHTML = "Capipepo";
   } else {
     spanMascotaEnemigo.innerHTML = "Ratigueya";
   }
+}
+
+function ataqueFuego() {
+  ataquejugador = "FUEGO";
+  ataquealeatorioEnemigo();
+}
+function ataqueAgua() {
+  ataquejugador = "AGUA";
+  ataquealeatorioEnemigo();
+}
+function ataqueTierra() {
+  ataquejugador = "TIERRA";
+  ataquealeatorioEnemigo();
+}
+
+function ataquealeatorioEnemigo() {
+  let ataqueAleatorio = aleatorio(1, 3);
+
+  if (ataqueAleatorio == 1) {
+    ataqueEnemigo = "FUEGO";
+  } else if (ataqueAleatorio == 2) {
+    ataqueEnemigo = "AGUA";
+  } else {
+    ataqueEnemigo = "TIERRA";
+  }
+
+  crearMensaje();
+}
+
+function crearMensaje() {
+  let sectionMensajes = document.getElementById("mensajes");
+
+  let parrafo = document.createElement("p");
+  parrafo.innerHTML =
+    "Tu mascota ataco con " +
+    ataquejugador +
+    ", la mascota del enemigo ataco con " +
+    ataqueEnemigo +
+    " - PENDIENTE";
+
+  sectionMensajes.appendChild(parrafo);
 }
 
 function aleatorio(min, max) {
