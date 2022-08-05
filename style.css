@@ -1,13 +1,85 @@
-.titulo {
-  color: hotpink;
-  width: 310px;
-  height: 50px;
-  background-color: teal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap");
 
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #041562;
+}
 #seleccionar-mascota {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.titulo {
+  color: white;
+  font-size: 32px;
+  font-family: "Fredoka One", cursive;
+}
+
+.subtitulo {
+  color: white;
+  font-size: 20px;
+}
+
+.tarjetas {
+  display: flex;
+  gap: 10px;
+}
+
+.tarjeta-de-mokepom {
+  width: 180px;
+  height: 100px;
+  background: #114685;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.tarjeta-de-mokepom img {
+  width: 80px;
+}
+
+#boton-mascota {
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid wheat;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin-top: 30px;
+}
+
+input {
+  display: none;
+}
+
+#seleccionar-ataque {
+  flex-direction: column;
+  align-items: center;
+}
+
+.boton-de-ataque {
+  background-color: #114685;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-color: transparent;
+  width: 200px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+#mensajes {
+  width: 280px;
+  background-color: #eeeeee;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
 }
