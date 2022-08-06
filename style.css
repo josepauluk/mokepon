@@ -83,3 +83,7 @@ input {
   display: flex;
   justify-content: center;
 }
+
+.ataques {
+  display: grid;
+}
